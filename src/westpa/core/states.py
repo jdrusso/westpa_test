@@ -52,7 +52,7 @@ class BasisState:
         for state in states:
             state_id_str = str(state.state_id) if state.state_id is not None else 'None'
             pcoord_str = str(list(state.pcoord))
-            auxref_str = str(state.auxref) if type(auxref_str) is not bytes else ''
+            auxref_str = str(state.auxref) if type(state.auxref) is not bytes else ''
             fileobj.write(
                 fmt.format(
                     state=state,
