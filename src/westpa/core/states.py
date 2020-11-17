@@ -53,6 +53,7 @@ class BasisState:
             state_id_str = str(state.state_id) if state.state_id is not None else 'None'
             pcoord_str = str(list(state.pcoord))
             auxref_str = str(state.auxref)
+            print(states.auxref)
             print(auxref_str)
             fileobj.write(
                 fmt.format(
