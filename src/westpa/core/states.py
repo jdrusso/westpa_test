@@ -27,7 +27,7 @@ class BasisState:
         self.auxref = auxref if type(auxref) is not bytes else ''
         self.state_id = state_id
 
-        #assert type(self.label) is not bytes
+        assert type(self.label) is not bytes
         assert type(self.auxref) is not bytes
 
     def __repr__(self):
