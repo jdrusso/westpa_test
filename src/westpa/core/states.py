@@ -20,7 +20,7 @@ class BasisState:
     '''
 
     def __init__(self, label, probability, pcoord=None, auxref=None, state_id=None):
-        self.label = str(label, encoding="UTF-8")
+        self.label = str(label, encoding="UTF-8") if type(label) is bytes else label
         self.probability = probability
         self.pcoord = np.atleast_1d(pcoord)
         self.auxref = auxref
@@ -60,7 +60,7 @@ class BasisState:
                 fmt.format(
                     state=state,
                     pcoord_str=pcoord_str,
-                    auxref_str='auxref',
+                    auxref_str=auxref_str,
                     state_id_str=state_id_str,
                     max_label_len=max_label_len,
                     max_auxref_len=max_auxref_len,
