@@ -57,11 +57,11 @@ class BasisState:
             fileobj.write(
                 fmt.format(
                     state=state,
-                    pcoord_str='[8.0]',
-                    auxref_str='auxstr',
-                    state_id_str='0',
-                    max_label_len=8,
-                    max_auxref_len=8,
+                    pcoord_str=pcoord_str,
+                    auxref_str=auxref_str,
+                    state_id_str=state_id_str,
+                    max_label_len=max_label_len,
+                    max_auxref_len=max_auxref_len,
                 )
             )
 
