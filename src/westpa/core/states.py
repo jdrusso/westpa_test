@@ -60,6 +60,10 @@ class BasisState:
             print(auxref_str)
             print(state.label)
             print(state.probability)
+
+            assert type(state.label) is not bytes
+            assert type(auxref_str) is not bytes
+
             fileobj.write(
                 fmt.format(
                     state=state,
