@@ -27,7 +27,6 @@ class BasisState:
         self.state_id = state_id
 
         assert type(self.label) is not bytes
-        print(self.auxref)
 
     def __repr__(self):
         return '{} state_id={self.state_id!r} label={self.label!r} prob={self.probability!r} pcoord={self.pcoord!r}>'.format(
@@ -55,7 +54,7 @@ class BasisState:
         for state in states:
             state_id_str = str(state.state_id) if state.state_id is not None else 'None'
             pcoord_str = str(list(state.pcoord))
-            auxref_str = None if state.auxref == b'' else str(state.auxref)
+            auxref_str = None if state.auxref == b'' else state.auxref
             print(auxref_str)
             print(state.label)
             print(state.probability)
