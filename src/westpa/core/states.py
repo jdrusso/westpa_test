@@ -20,7 +20,7 @@ class BasisState:
     '''
 
     def __init__(self, label, probability, pcoord=None, auxref=None, state_id=None):
-        self.label = str(label, encoding="utf-8")
+        self.label = str(label, encoding="UTF-8")
         self.probability = probability
         self.pcoord = np.atleast_1d(pcoord)
         self.auxref = auxref
