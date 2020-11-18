@@ -54,6 +54,8 @@ class BasisState:
             pcoord_str = str(list(state.pcoord))
             auxref_str = str(state.auxref) if type(state.auxref) is not bytes else ''
             print(auxref_str)
+            print(state.label)
+            print(state.probability)
             fileobj.write(
                 fmt.format(
                     state=state,
