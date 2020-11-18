@@ -20,15 +20,16 @@ class BasisState:
     '''
 
     def __init__(self, label, probability, pcoord=None, auxref=None, state_id=None):
-        #self.label = str(label, encoding="UTF-8") if type(label) is bytes else label
+        # self.label = str(label, encoding="UTF-8") if type(label) is bytes else label
         self.label = label
         self.probability = probability
         self.pcoord = np.atleast_1d(pcoord)
         self.auxref = auxref
         self.state_id = state_id
 
-        assert type(self.label) is not bytes
-
+        #assert type(self.label) is not bytes
+        print(self.auxref)
+        
     def __repr__(self):
         return '{} state_id={self.state_id!r} label={self.label!r} prob={self.probability!r} pcoord={self.pcoord!r}>'.format(
             object.__repr__(self)[:-1], self=self
