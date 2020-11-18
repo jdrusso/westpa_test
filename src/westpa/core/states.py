@@ -24,12 +24,12 @@ class BasisState:
         self.label = label
         self.probability = probability
         self.pcoord = np.atleast_1d(pcoord)
-        self.auxref = auxref
+        self.auxref = auxref if type(auxref) is not bytes else ''
         self.state_id = state_id
 
         #assert type(self.label) is not bytes
-        print(self.auxref)
-        
+        assert type(self.auxref) is not bytes
+
     def __repr__(self):
         return '{} state_id={self.state_id!r} label={self.label!r} prob={self.probability!r} pcoord={self.pcoord!r}>'.format(
             object.__repr__(self)[:-1], self=self
