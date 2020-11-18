@@ -23,7 +23,7 @@ class BasisState:
         self.label = str(label, encoding="UTF-8") if type(label) is bytes else label
         self.probability = probability
         self.pcoord = np.atleast_1d(pcoord)
-        self.auxref = str(auxref, encoding="UTF-8") if type(auxref) is bytes or b'' else auxref
+        self.auxref = None if auxref == '' or auxref == b'' else auxref
         self.state_id = state_id
 
     def __repr__(self):
@@ -52,7 +52,7 @@ class BasisState:
         for state in states:
             state_id_str = str(state.state_id) if state.state_id is not None else 'None'
             pcoord_str = str(list(state.pcoord))
-            auxref_str = str(state.auxref) if state.auxref is not None else 'None'
+            auxref_str = str(state.auxref, encoding="UTF-8") if type(state.auxref) is bytes else str(state.auxref)
             print(auxref_str)
             print(state.label)
             print(state.probability)
