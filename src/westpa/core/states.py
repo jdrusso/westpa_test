@@ -27,6 +27,7 @@ class BasisState:
         self.state_id = state_id
 
         assert type(self.label) is not bytes
+        print(self.auxref)
 
     def __repr__(self):
         return '{} state_id={self.state_id!r} label={self.label!r} prob={self.probability!r} pcoord={self.pcoord!r}>'.format(
