@@ -70,7 +70,7 @@ class BasisState:
                 fmt.format(
                     state=state,
                     pcoord_str=pcoord_str,
-                    auxref_str='auxref',
+                    auxref_str=auxref_str,
                     state_id_str=state_id_str,
                     max_label_len=max_label_len,
                     max_auxref_len=max_auxref_len,
