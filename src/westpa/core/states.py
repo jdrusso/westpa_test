@@ -21,7 +21,7 @@ class BasisState:
 
     def __init__(self, label, probability, pcoord=None, auxref=None, state_id=None):
         self.label = str(label, encoding="UTF-8") if type(label) is bytes else label
-        self.label = label
+        # self.label = label
         self.probability = probability
         self.pcoord = np.atleast_1d(pcoord)
         # self.auxref = auxref if type(auxref) is not bytes else ''
