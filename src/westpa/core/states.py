@@ -57,7 +57,7 @@ class BasisState:
         for state in states:
             state_id_str = str(state.state_id) if state.state_id is not None else 'None'
             pcoord_str = str(list(state.pcoord))
-            auxref_str = '' if type(state.auxref) is bytes or state.auxref == "b''" else state.auxref
+            auxref_str = None if type(state.auxref) is bytes or state.auxref == "b''" else state.auxref
             print(auxref_str)
             print(state.label)
             print(state.probability)
