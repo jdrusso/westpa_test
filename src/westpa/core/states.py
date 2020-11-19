@@ -64,6 +64,7 @@ class BasisState:
 
             assert type(state.label) is not bytes
             assert type(auxref_str) is not bytes
+            assert not auxref_str == "b''"
 
             fileobj.write(
                 fmt.format(
